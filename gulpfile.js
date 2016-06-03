@@ -8,7 +8,6 @@ var gulp = require('gulp'),
 	minifyCss = require('gulp-minify-css'),
 	imagemin = require('gulp-imagemin'),
 	jsmin = require('gulp-jsmin'),
-	rename = require('gulp-rename'),
 	autoprefixer = require('gulp-autoprefixer');
 
 //minify scripts
@@ -78,4 +77,4 @@ gulp.task('watch', function() {
 gulp.task('default', ['scripts', 'sass', 'watch', 'image']);
 
 //add compressed build task
-gulp.task('build', ['concatCss', 'minjs']);
+gulp.task('build', ['concatCss', 'minjs', 'image']);
